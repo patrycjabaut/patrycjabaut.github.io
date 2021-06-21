@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+body
+{
+    margin: 0;
+    padding: 0 5em;
+
+    font-family: Poppins, sans-serif;
+    font-size: 14pt;
+
+    background-color: black;
+    color: white;
+}
+
+#site-header
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em 0;
+    margin-bottom: 3em;
+    font-family: Cinzel;
+}
+
+#site-header .name
+{
+    display: block;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+#site-header .position
+{
+    display: block;
+    font-weight: 400;
+    text-align: center;
+}
+
+#site-header nav a
+{
+    padding-left: 1.5em;
+    font-weight: 400;
+    font-size: 1.2em;
+    color: white;
+}
+
+
+
+section 
+{
+    padding: 0 2em;
+}
+
+section > p 
+{
+    font-weight: 200;
+    text-align: justify;
+    width: 70%;
+}
+
+section > h1
+{
+    font-family: Cinzel;
+    font-weight: 500;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+section > h2
+{
+    margin-top: 2em;
+    margin-bottom: .5em;
+    font-family: Cinzel;
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+section > hr
+{
+    opacity: .33;
+    width: 50%;
+    margin: auto;
+}
+
+
+
+
+.flex-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex-center div
+{
+    background-color: #111 ;
+    border-radius: 4px;
+
+    display: block;
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 25%;
+    padding: 1em;
+    margin: 0 1em;
+    
+    font-family: Poppins;
+    font-weight: 200;
+    text-align: center;
+}
+
+.flex-center header
+{
+    font-weight: 300;
+}
+
+.flex-center article
+{
+    font-size: 12pt;
+}
+
+.flex-center ul
+{
+    text-align: left;
+}
+
+.align-middle
+{
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#site-footer 
+{
+    min-height: 5em;
+    background-color: #111;
+    margin-top: 3em;
+}
