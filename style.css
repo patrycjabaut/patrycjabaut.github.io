@@ -197,3 +197,22 @@ a:hover
 {
     text-align: left;
 }
+
+.grid4
+{
+    display: grid;
+    grid-template-columns: repeat(4, fit-content(10rem));
+    text-align: center;
+    gap: 1rem;
+    font-size: .8rem;
+}
+
+.grid4 div
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    border: 1px solid purple;
+    border-radius: 4px;;
+    padding: 1rem;
+}
