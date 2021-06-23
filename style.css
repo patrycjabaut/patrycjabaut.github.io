@@ -2,50 +2,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
-body
+html
 {
-    margin: 0 auto;
-    padding: 0 8em;
-
     font-family: Poppins, sans-serif;
     font-size: 14pt;
     line-height: 1.5;
-
+    
     background-color: black;
     color: white;
-    overflow-x: hidden;
-    max-width: 1500px;
 }
 
-body > img
+body
 {
     margin: 0 auto;
-    position: absolute;
-    top: 0;
-    
-    z-index: -1;
-    filter: blur(32px);
-    opacity: 75%;
-    overflow: hidden;
-    
-    min-width: 1500px;
-    width: 110%;
-    height: min-content;
-
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 body > header
 {
     display: flex;
-    flex-direction: row;
+    flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     margin-top: 3em;
     margin-bottom: 5em;
     font-family: Cinzel;
 }
+
+#background-image
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: min-content;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-image > img
+{
+    /* display: none; */
+    margin: 0 auto;
+    
+    filter: blur(32px);
+    opacity: 75%;
+    
+    min-width: 1500px;
+    width: 110%;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
 
 body > header .name
 {
@@ -84,9 +94,6 @@ body > h1 /* really hate the h1 need to figure out how to use header instead*/
     font-weight: 500;
     font-size: 2.5rem;
     text-align: center;
-    margin-bottom: 0;
-    margin-top: 15rem;
-    margin-bottom: 8rem;
 }
 
 
@@ -96,8 +103,9 @@ section
     font-weight: 200;
     margin: 3rem 0;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     text-align: justify;
+    overflow: hidden;
 }
 
 section header
@@ -120,9 +128,9 @@ section main
 
 section aside
 {
-    margin-top: 4rem;
-    padding-left: 2rem;
+    padding-block-start: 2rem;
     flex: 0 1 auto;
+    width: 80%;
 }
 
 section aside img
@@ -146,6 +154,7 @@ section .right + aside
 
 a
 {
+    /* text-decoration: none; */
     display: inline-block;
     transition: transform .1s;
 }
@@ -159,22 +168,21 @@ a:hover
 
 .flex-center {
     display: flex;
-    flex-direction: row;
+    flex-flow: row nowrap;
     justify-content: center;
+    gap: 2rem;
 }
 
 .flex-center div
 {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.1);
     box-shadow: 0 16px 32px rgba(0,0,0,.2);
     border-radius: 8px;
     
     flex-grow: 1;
     flex-basis: 0;
     max-width: 30%;
-    padding: 1em;
-    margin: 0 .5em;
-    
+    padding: 1rem;
 
     text-align: center;
     backdrop-filter: blur(32px);
@@ -216,3 +224,65 @@ a:hover
     border-radius: 4px;;
     padding: 1rem;
 }
+
+
+
+@media (max-width: 480px)
+{
+    html
+    {
+        font-size: 10pt;
+    }
+
+    body
+    {
+        padding: 0 2rem;
+    }
+
+    body > header
+    {
+        flex-flow: column nowrap;
+        gap: 3rem;
+        margin: unset;
+        margin-top: 2rem;
+    }
+
+    body > header nav a
+    {
+        padding-left: unset;
+        padding: 0 .5rem;
+    }
+
+    .flex-center
+    {
+        flex-flow: column nowrap;
+    }
+
+    .flex-center div
+    {
+        max-width: unset;
+    }
+}
+
+@media (min-width: 768px)
+{
+    body {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 1920px)
+{
+    body {
+        max-width: 1500px;
+    }
+}
+
+/* 
+phone:  <480px
+tablet: <768px
+desktop:
+    small:  <1280px
+    medium: <1920px
+    large:  >1920px 
+*/
